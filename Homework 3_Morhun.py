@@ -18,5 +18,5 @@ def Task_4_Even_or_Odd():
     print(bool(number % 2) and "Number is Odd" or "Number is Even")
 
 def Task_5_Largest_of_three():
-    number1, number2, number3 = input("Type any number:").split()
+    number1, number2, number3 = input("Type any three numbers:").split()
     print(max(int(number1), int(number2), int(number3)))
