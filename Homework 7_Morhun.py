@@ -18,8 +18,8 @@ def task3_unicode_char_counter():
 
 def task4_pi():
     from math import pi
-    for i in range(10):
-        print(round(pi, 2 + i))
+    for i in range(2, 11):
+        print(f'{pi:.{i}f}')
 
 
 def task5_longest_word():
