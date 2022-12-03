@@ -99,3 +99,34 @@ def task5_numeric_to_alphabet(number):
 
 
 print(task5_numeric_to_alphabet('0,99'))
+
+
+def task6_roman_to_digits(roman: str):
+    roman_values = {'I': 1,
+                    'IV': 4,
+                    'V': 5,
+                    'IX': 9,
+                    'X': 10,
+                    'XL': 40,
+                    'L': 50,
+                    'XC': 90,
+                    'C': 100,
+                    'D': 500,
+                    'CM': 900,
+                    'M': 1000,
+                    }
+    counter = 0
+    digital_values = 0
+    while counter + 1 <= len(roman):
+        if roman[counter:counter + 2] in roman_values:
+            digital_values += roman_values[roman[counter:counter + 2]]
+            counter += 2
+        else:
+            digital_values += roman_values[roman[counter]]
+            counter += 1
+    if counter < len(roman):
+        digital_values += roman_values[roman[counter + 1]]
+    return digital_values
+
+
+print(task6_roman_to_digits('MMMCMXCIX'))
