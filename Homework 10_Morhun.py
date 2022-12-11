@@ -2,18 +2,18 @@ def task1_sequence(sequence: str):
     sequence_list = list(map(int, sequence.split(',')))
     if sequence_list[1] - sequence_list[0] == sequence_list[2] - sequence_list[1]:
         next_element = sequence_list[len(sequence_list) - 1] + (sequence_list[1] - sequence_list[0])
-        return f'{next_element}, arithmetic sequence'
+        return next_element, 'arithmetic sequence'
     if sequence_list[1] // sequence_list[0] == sequence_list[2] // sequence_list[1]:
         next_element = sequence_list[len(sequence_list) - 1] * (sequence_list[1] // sequence_list[0])
-        return f'{next_element}, geometric sequence'
+        return next_element, 'geometric sequence'
     for i in range(10):
         if sequence_list[1] == sequence_list[0] ** i:
             next_element = int(sequence_list[len(sequence_list) - 1] ** (1 / i) ** i)
-            return f'{next_element}, exponential sequence'
+            return next_element, 'exponential sequence'
     for i in range(10):
         if sequence_list[1] == (sequence_list[0] + 1) ** i:
             next_element = int((sequence_list[len(sequence_list) - 1] ** (1 / i) + 1) ** i)
-            return f'{next_element}, incremental exponential sequence'
+            return next_element, 'incremental exponential sequence'
 
 
 # we can count any rank palindrome
